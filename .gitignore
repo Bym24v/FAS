@@ -10,8 +10,8 @@ __pycache__/
 .Python
 env/
 build/
+adb/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
