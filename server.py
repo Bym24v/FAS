@@ -7,11 +7,8 @@ import datetime
 import hashlib
 import uuid
 
-
 instClient = FASClient()
 instClient.token = "None"
-
-#clients = []
 
 # path redirect login
 @route('/')
@@ -65,9 +62,11 @@ def service_register():
 @post('/register')
 def service_post_register():
 
+    # get data
     username = request.forms.get('username')
     password = request.forms.get('password')
 
+    # check register user
     if instClient.FasRegister(username, password):
         print "Registrado!"
         return redirect('/login')
@@ -77,10 +76,10 @@ def service_post_register():
 
     return redirect('/login')
 
+# Logout
 @post('/logout')
 def service_logout():
-    value = ""
-    response.set_cookie('token', value, path='/', expires=1000)
+    response.set_cookie('token', "", path='/', expires=1000)
     return template('login')
 
 
