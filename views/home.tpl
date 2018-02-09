@@ -34,6 +34,7 @@
       <div class="row">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
           <div class="sidebar-sticky">
+
             <ul class="nav flex-column">
               <li class="nav-item">
                 <a class="nav-link active" href="#">
@@ -53,57 +54,122 @@
                   Integrations
                 </a>
               </li>
-            </ul>
+            </ul> <!--end menu --> 
 
             <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
               <span>Saved reports</span>
-              <a class="d-flex align-items-center text-muted" href="/">
+              <a class="d-flex align-items-center text-muted" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" href="#">
                 <span data-feather="plus-circle"></span>
               </a>
             </h6>
+
             <ul class="nav flex-column mb-2">
+
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  <span data-feather="file-text"></span>
-                  Current month
+                  <span data-feather="database"></span>
+                  Android API
+                  <span class="badge badge-primary">27</span>
                 </a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  <span data-feather="file-text"></span>
-                  Last quarter
+                  <span data-feather="database"></span>
+                  Android API
+                  <span class="badge badge-primary">26</span>
                 </a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  <span data-feather="file-text"></span>
-                  Social engagement
+                  <span data-feather="database"></span>
+                  Android API
+                  <span class="badge badge-primary">25</span>
                 </a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  <span data-feather="file-text"></span>
-                  Year-end sale
+                  <span data-feather="database"></span>
+                  Android API
+                  <span class="badge badge-primary">24</span>
                 </a>
               </li>
-            </ul>
-          </div>
+
+            </ul> <!-- end save reports -->
+
+            <div class="submenu-sidebar">
+              <div class="row">
+
+                <div class="col-sm-4">
+                  <a class="nav-link" href="#">
+                    <span data-feather="play"></span>
+                  </a>
+                </div>
+
+                <div class="col-sm-4">
+                  <a class="nav-link" href="#">
+                    <span data-feather="stop-circle"></span>
+                  </a>
+                </div>
+                
+                <div class="col-sm-4">
+                  <a class="nav-link" href="#">
+                    <span data-feather="settings"></span>
+                  </a>
+                </div>
+
+              </div> <!-- end row -->
+            </div> <!-- end submenu-sidebar -->
+
+          </div> <!-- end sidebar -->
+
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-          <!--<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-            <h1 class="h2">Dashboard</h1>
-            <div class="btn-toolbar mb-2 mb-md-0">
-              <div class="btn-group mr-2">
-                <button class="btn btn-sm btn-outline-secondary">Share</button>
-                <button class="btn btn-sm btn-outline-secondary">Export</button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+
+                <!-- header -->
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Save DataBase</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> <!-- end modal header -->
+
+                <!-- body -->
+                <div class="modal-body">
+                  <form>
+
+                    <!-- Title --> 
+                    <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">Titulo:</label>
+                      <input type="text" class="form-control" id="recipient-name">
+                    </div>
+
+                    <!-- nota -->
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Nota:</label>
+                      <textarea class="form-control" id="message-text"></textarea>
+                    </div> <!-- end nota -->
+
+                  </form>
+                </div> <!-- end modal body  -->
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save</button>
+                </div> <!-- end modal footer -->
+
               </div>
-              <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span data-feather="calendar"></span>
-                This week
-              </button>
             </div>
-          </div>-->
+          </div> <!-- end modal -->
+
 
           <!--<canvas class="my-4" id="myChart" width="900" height="380"></canvas>-->
 
@@ -121,10 +187,11 @@
                 <div class="col-md-2">
                   <p class="card-title">Priority: <span>E</span></p>
                   <p class="card-text">TAG: Activity</p>
+                  <p class="card-text">PID: 4498</p>
                 </div>
 
                 <div class="col-md-10">
-                  <p>Stack OwerFlow</p>
+                  <p>at com.google.android.apps.gsa.speech.audio.an.run(SourceFile:2)</p>
                 </div>
 
               </div> <!-- end row -->
@@ -147,10 +214,11 @@
                 <div class="col-md-2">
                   <p class="card-title">Priority: <span>E</span></p>
                   <p class="card-text">TAG: Activity</p>
+                  <p class="card-text">PID: 4498</p>
                 </div>
 
                 <div class="col-md-10">
-                  <p>Stack OwerFlow</p>
+                  <p>com.google.android.apps.gsa.shared.util.concurrent.a.ag.run(Unknown Source:4)</p>
                 </div>
 
               </div> <!-- end row -->

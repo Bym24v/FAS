@@ -8,9 +8,6 @@ client = MongoClient() #"mongodb://localhost:27017"
 db = client.FAS
 
 class FASClient:
-    
-    def __init__(self):
-        pass
 
     def FasRegister(self, name, password):
 
@@ -37,7 +34,6 @@ class FASClient:
             return False
 
         return False
-    
 
     def FasLogin(self, name, password):
 
@@ -94,3 +90,26 @@ class FASClient:
         
 
         return False
+
+    def FasSaveRawData(self, priority, tag, pid, msg):
+
+        try:
+
+            result = db.FasRawData.insert_one(
+                {       
+                    "_id": hashlib.md5(msg+pid).hexdigest(),
+                    "priority": priority,
+                    "tag": tag,
+                    "pid": pid,
+                    "msg": msg
+                }
+            )
+
+            return True
+        except:
+            return False
+
+        return False
+
+    def FasGetRawData(self):
+        pass
