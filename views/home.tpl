@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Fuzzing System Android">
-    <meta name="author" content="Bym24v&BleICer">
+    <meta name="author" content="FAS">
 
     <title>Dashboard</title>
 
@@ -18,7 +18,7 @@
 
   <body>
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Fuzzing Android</a>
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">FAS Beta</a>
       <input id="search" class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
@@ -54,7 +54,7 @@
 
             <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
               <span>Saved reports</span>
-              <a class="d-flex align-items-center text-muted" href="#">
+              <a class="d-flex align-items-center text-muted" href="/">
                 <span data-feather="plus-circle"></span>
               </a>
             </h6>
@@ -104,46 +104,58 @@
 
           <!--<canvas class="my-4" id="myChart" width="900" height="380"></canvas>-->
 
-          <h2>Section title</h2>
-          <div id="accordion">
+          <h2>Dashboard</h2>      
 
-            <div class="card border-primary">
+          <div class="card">
 
-              <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    01-31 MainActivity tag:F #1
-                  </button>
-                </h5>
-              </div>
+            <div class="card-header alert-danger">
+              <h5>E / Activity / 4498</h6>
+            </div>
 
-              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            <div class="card-body">
+      
+              <div class="row">
+                <div class="col-md-2">
+                  <p class="card-title">Priority: <span>E</span></p>
+                  <p class="card-text">TAG: Activity</p>
                 </div>
-              </div>
 
-            </div><!-- end card -->
-
-            <div class="card border-success">
-
-              <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
-                    Collapsible Group Item #1
-                  </button>
-                </h5>
-              </div>
-
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                <div class="col-md-10">
+                  <p>Stack OwerFlow</p>
                 </div>
-              </div>
 
-            </div><!-- end card -->
+              </div> <!-- end row -->
 
-        </div> <!-- end collapse -->
+
+            </div><!-- end card-body -->
+
+          </div> <!-- end card -->
+
+
+          <div class="card">
+
+            <div class="card-header alert-success">
+              <h5>E / Activity / 4498</h6>
+            </div>
+
+            <div class="card-body">
+      
+              <div class="row">
+                <div class="col-md-2">
+                  <p class="card-title">Priority: <span>E</span></p>
+                  <p class="card-text">TAG: Activity</p>
+                </div>
+
+                <div class="col-md-10">
+                  <p>Stack OwerFlow</p>
+                </div>
+
+              </div> <!-- end row -->
+
+
+            </div><!-- end card-body -->
+
+          </div> <!-- end card -->
           
         </main> <!-- end main -->
       </div>
@@ -154,7 +166,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="http://localhost:8000/static/js/jquery-slim.min.js"><\/script>')</script>
-    <script src="http://localhost:8000/static/js/vendor/popper.min.js"></script>
+    <script src="http://localhost:8000/static/js/popper.min.js"></script>
     <script src="http://localhost:8000/static/js/bootstrap.min.js"></script>
 
     <!-- Icons -->
@@ -168,8 +180,8 @@
     $(document).ready(function(){
         $("#search").on("keyup", function() {
             var value = $(this).val().toLowerCase();
-            $("#myTable tr").filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            $("#card-find p").filter(function() {
+            //$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
             });
         });
     });

@@ -1,7 +1,5 @@
 from bottle import route, run, template
-from modules.mongodb.home import HomeData
 
-insHome = HomeData()
 
 
 @route('/api/savedata')
