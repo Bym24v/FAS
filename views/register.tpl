@@ -17,17 +17,17 @@
   </head>
 
   <body class="text-center">
-
-    <form action="/login" method="POST" class="form-signin">
-      <h1 id="txt" class="h3 mb-3 font-weight-normal">FAS | Login</h1>
+  
+    <form action="/register" method="POST" class="form-signin">
+      <h1 id="txt" class="h3 mb-3 font-weight-normal">FAS | Register</h1>
 
       <label class="sr-only">Username</label>
       <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
 
       <label class="sr-only">Password</label>
       <input type="password" name="password" class="form-control" placeholder="Password" required>
-
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+      
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
       <p class="mt-5 mb-3 text-muted">&copy; FAS 2017-2018</p>
     </form>
 

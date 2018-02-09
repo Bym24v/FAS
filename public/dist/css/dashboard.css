@@ -8,6 +8,10 @@ body {
   vertical-align: text-bottom;
 }
 
+.card{
+  margin-top: 20px;
+}
+
 /*
  * Sidebar
  */
