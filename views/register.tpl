@@ -7,7 +7,7 @@
     <meta name="description" content="Fuzzing System Android">
     <meta name="author" content="FAS">
 
-    <title>Login</title>
+    <title>FAS | Register</title>
 
     <!-- Bootstrap core CSS -->
     <link href="http://localhost:8000/static/css/bootstrap.min.css" rel="stylesheet">

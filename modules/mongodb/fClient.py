@@ -20,12 +20,15 @@ class FASClient:
             pass
 
         try:
+
+            tokenPasswrod = hashlib.sha512(password).hexdigest()
+
             result = db.FasUsers.insert_one(
                 {       
                     "_id": hashlib.sha1(name).hexdigest(),
                     "name": name,
-                    "password": hashlib.sha224(password).hexdigest(),
-                    "validate": False       
+                    "password": hashlib.sha512(password).hexdigest(),
+                    "token": hashlib.sha224(tokenPasswrod).hexdigest()      
                 }
             )
 
@@ -46,10 +49,9 @@ class FASClient:
         try:
             # result db
             result = db.FasUsers.find({"name": name})
-            
+
             # parse sha224 passwrod
-            parsePassword = hashlib.sha224(password).hexdigest()
-            print parsePassword
+            parsePassword = hashlib.sha512(password).hexdigest()
 
             if result.count() == 0:
                 return False
@@ -63,4 +65,32 @@ class FASClient:
         
 
         return False
+    
+    def FasCheckToken(self, token):
+
+        if token == "":
+            return False
+        else:
+            pass
+
+        try:
+            # result db
+            result = db.FasUsers.find({"token": token})
+            #print result[0]['token']
+
+            # parse sha224 token
+            tokenClient = hashlib.sha224(result[0]['password']).hexdigest()
+            #print tokenClient
+
+            if result.count() == 0:
+                return False
+            elif result[0]['token'] == tokenClient:
+                #print result[0]['token']
+                return True
+            else:
+                return False
+        except:
+            return False
         
+
+        return False
