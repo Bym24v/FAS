@@ -7,7 +7,7 @@
     <meta name="description" content="Fuzzing System Android">
     <meta name="author" content="FAS">
 
-    <title>Dashboard</title>
+    <title>FAS | Home</title>
 
     <!-- Bootstrap core CSS -->
     <link href="http://localhost:8000/static/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +22,10 @@
       <input id="search" class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-          <a class="nav-link" href="/">Sign out</a>
+          <form action="/logout" method="POST" class="form-signin">
+            <!--<a class="nav-link" type="submit">Sign out</a>-->
+            <button class="btn btn btn-outline-primary btn-block" type="submit">Logout</button>
+          </form>
         </li>
       </ul>
     </nav>

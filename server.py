@@ -1,4 +1,4 @@
-from bottle import route, run, template, redirect, request, post, response
+from bottle import route, run, template, redirect, request, post, response, error
 from modules.static import staticFile
 from modules.adb.adbBin import StartADB
 from modules.mongodb.fClient import FASClient
@@ -9,7 +9,7 @@ import uuid
 
 
 instClient = FASClient()
-instClient.token = None
+instClient.token = "None"
 
 #clients = []
 
@@ -17,14 +17,19 @@ instClient.token = None
 @route('/')
 def service_home():
     
-    cookie = request.get_cookie('cookie')
+    # get token
+    token = request.get_cookie('token')
 
-    if cookie == None:
+    # check token 
+    if token == None:
         return redirect('/login')
-    elif cookie:
-        return template('home')
+    elif token:
+        if instClient.FasCheckToken(token):
+            return template('home')
+        else:
+            return template('login')
 
-# route login 
+# Login 
 @route('/login')
 def service_login():
         return template('login')
@@ -32,29 +37,25 @@ def service_login():
 @post('/login')
 def service_post_login():
 
-    # time expiracion de la cookie
+    # expirate token
     ts = datetime.datetime.utcnow() + datetime.timedelta(days=30)
 
-    # generate user uuid
-    instClient.token = uuid.uuid4().hex
-
+    # get data
     username = request.forms.get('username')
     password = request.forms.get('password')
 
-    #clients.append(
-    #    {   
-    #        'uuid': instClient.token,
-    #        'name': username
-    #    })
+    # generate hash 512 
+    tokenPassword = hashlib.sha512(password).hexdigest()
 
-    #print len(clients)
+    # generate user token hash 224
+    instClient.token = hashlib.sha224(tokenPassword).hexdigest()
 
     # check password
     if instClient.FasLogin(username, password):
-        response.set_cookie('cookie', instClient.token, path='/', expires=ts)
-        return redirect('/') # yes
+        response.set_cookie('token', instClient.token, path='/', expires=ts)
+        return redirect('/') 
     else:
-        return redirect('/login') # no
+        return redirect('/login')
 
 # Register
 @route('/register')
@@ -76,23 +77,28 @@ def service_post_register():
 
     return redirect('/login')
 
+@post('/logout')
+def service_logout():
+    value = ""
+    response.set_cookie('token', value, path='/', expires=1000)
+    return template('login')
 
 
-
-
-
-
-
-
-#@route('/home')
-#def service_index():
-#    return template('home')
 
 @route('/adb')
 def service_adb():
     
     StartADB();
     #return template('index')
+
+
+@error(404)
+def error404(error):
+    return "ERROR"
+
+@error(500)
+def error500(error):
+    return "ERROR"
 
 if __name__ == '__main__':
     run(host='localhost', port=8000, debug=True)
