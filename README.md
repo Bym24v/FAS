@@ -1,2 +1,0 @@
-# FAS
-Fuzzer Android System
