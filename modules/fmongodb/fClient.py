@@ -25,7 +25,7 @@ class FASClient:
                     "_id": hashlib.sha1(name).hexdigest(),
                     "name": name,
                     "password": hashlib.sha512(password).hexdigest(),
-                    "token": hashlib.sha224(tokenPasswrod).hexdigest()      
+                    "token": hashlib.sha224(tokenPasswrod+name).hexdigest()      
                 }
             )
 
@@ -75,7 +75,7 @@ class FASClient:
             #print result[0]['token']
 
             # parse sha224 token
-            tokenClient = hashlib.sha224(result[0]['password']).hexdigest()
+            tokenClient = hashlib.sha224(result[0]['password']+result[0]['name']).hexdigest()
             #print tokenClient
 
             if result.count() == 0:
@@ -112,4 +112,10 @@ class FASClient:
         return False
 
     def FasGetRawData(self):
+        pass
+
+    def FasSaveReport(self):
+        pass
+
+    def FasGetReport(self):
         pass
