@@ -1,8 +1,8 @@
 from bottle import route, run, template, redirect, request, post, response, error
-from modules.static import staticFile
-from modules.adb.adbBin import StartADB
-from modules.mongodb.fClient import FASClient
-from modules.api.api import *
+from modules.fstatic import staticFile
+from modules.fadb.adbBin import StartADB
+from modules.fmongodb.fClient import FASClient
+from modules.fapi.api import *
 import datetime
 import hashlib
 import uuid
@@ -45,7 +45,7 @@ def service_post_login():
     tokenPassword = hashlib.sha512(password).hexdigest()
 
     # generate user token hash 224
-    instClient.token = hashlib.sha224(tokenPassword).hexdigest()
+    instClient.token = hashlib.sha224(tokenPassword + username).hexdigest()
 
     # check password
     if instClient.FasLogin(username, password):

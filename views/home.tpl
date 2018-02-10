@@ -66,7 +66,7 @@
             <ul class="nav flex-column mb-2">
 
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link active" href="#">
                   <span data-feather="database"></span>
                   Android API
                   <span class="badge badge-primary">27</span>
@@ -103,7 +103,7 @@
               <div class="row">
 
                 <div class="col-sm-4">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link active" href="#">
                     <span data-feather="play"></span>
                   </a>
                 </div>
@@ -148,15 +148,38 @@
 
                     <!-- Title --> 
                     <div class="form-group">
-                      <label for="recipient-name" class="col-form-label">Titulo:</label>
-                      <input type="text" class="form-control" id="recipient-name">
+                      <label for="recipient-name" class="col-form-label">Device:</label><br>
+                      <!--<input type="text" class="form-control" id="recipient-name">-->
+
+                      <select id="process">
+                        <option value="volvo">Android-Emulator-5444</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                      </select>
+
                     </div>
 
-                    <!-- nota -->
                     <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">Android System:</label><br>
+                      <!--<input type="text" class="form-control" id="recipient-name">-->
+
+                      <select id="android-api">
+                        <option value="volvo">Google API 27</option>
+                        <option value="saab">Google API 26</option>
+                        <option value="opel">Google API 25</option>
+                        <option value="audi">Google API 24</option>
+                      </select>
+
+                    </div>
+
+                    
+
+                    <!-- nota -->
+                    <!--<div class="form-group">
                       <label for="message-text" class="col-form-label">Nota:</label>
                       <textarea class="form-control" id="message-text"></textarea>
-                    </div> <!-- end nota -->
+                    </div>--> <!-- end nota -->
 
                   </form>
                 </div> <!-- end modal body  -->
@@ -227,7 +250,8 @@
             </div><!-- end card-body -->
 
           </div> <!-- end card -->
-          
+
+          % include('reports.tpl')
         </main> <!-- end main -->
       </div>
     </div>
