@@ -200,19 +200,22 @@
 
           <div class="card">
 
+            <!-- header -->
             <div class="card-header alert-danger">
               <h5>E / Activity / 4498</h6>
             </div>
 
             <div class="card-body">
-      
+
+              <!-- body -->
               <div class="row">
                 <div class="col-md-2">
                   <p class="card-title">Priority: <span>E</span></p>
-                  <p class="card-text">TAG: Activity</p>
-                  <p class="card-text">PID: 4498</p>
+                  <p class="card-text">TAG: <span>Activity</span></p>
+                  <p class="card-text">PID: <span>4498</span></p>
                 </div>
 
+                <!-- msg -->
                 <div class="col-md-10">
                   <p>at com.google.android.apps.gsa.speech.audio.an.run(SourceFile:2)</p>
                 </div>
@@ -251,9 +254,194 @@
 
           </div> <!-- end card -->
 
-          % include('reports.tpl')
+          <div class="card">
+
+            <div class="card-header alert-success">
+              <h5>E / Activity / 4498</h6>
+            </div>
+
+            <div class="card-body">
+      
+              <div class="row">
+                <div class="col-md-2">
+                  <p class="card-title">Priority: <span>E</span></p>
+                  <p class="card-text">TAG: Activity</p>
+                  <p class="card-text">PID: 4498</p>
+                </div>
+
+                <div class="col-md-10">
+                  <p>com.google.android.apps.gsa.shared.util.concurrent.a.ag.run(Unknown Source:4)</p>
+                </div>
+
+              </div> <!-- end row -->
+
+
+            </div><!-- end card-body -->
+
+          </div> <!-- end card -->
+
+          <div class="card">
+
+            <div class="card-header alert-success">
+              <h5>E / Activity / 4498</h6>
+            </div>
+
+            <div class="card-body">
+      
+              <div class="row">
+                <div class="col-md-2">
+                  <p class="card-title">Priority: <span>E</span></p>
+                  <p class="card-text">TAG: Activity</p>
+                  <p class="card-text">PID: 4498</p>
+                </div>
+
+                <div class="col-md-10">
+                  <p>com.google.android.apps.gsa.shared.util.concurrent.a.ag.run(Unknown Source:4)</p>
+                </div>
+
+              </div> <!-- end row -->
+
+
+            </div><!-- end card-body -->
+
+          </div> <!-- end card -->
+
+          <div class="card">
+
+            <div class="card-header alert-success">
+              <h5>E / Activity / 4498</h6>
+            </div>
+
+            <div class="card-body">
+      
+              <div class="row">
+                <div class="col-md-2">
+                  <p class="card-title">Priority: <span>E</span></p>
+                  <p class="card-text">TAG: Activity</p>
+                  <p class="card-text">PID: 4498</p>
+                </div>
+
+                <div class="col-md-10">
+                  <p>com.google.android.apps.gsa.shared.util.concurrent.a.ag.run(Unknown Source:4)</p>
+                </div>
+
+              </div> <!-- end row -->
+
+
+            </div><!-- end card-body -->
+
+          </div> <!-- end card -->
+
+          <div class="card">
+
+            <div class="card-header alert-success">
+              <h5>E / Activity / 4498</h6>
+            </div>
+
+            <div class="card-body">
+      
+              <div class="row">
+                <div class="col-md-2">
+                  <p class="card-title">Priority: <span>E</span></p>
+                  <p class="card-text">TAG: Activity</p>
+                  <p class="card-text">PID: 4498</p>
+                </div>
+
+                <div class="col-md-10">
+                  <p>com.google.android.apps.gsa.shared.util.concurrent.a.ag.run(Unknown Source:4)</p>
+                </div>
+
+              </div> <!-- end row -->
+
+
+            </div><!-- end card-body -->
+
+          </div> <!-- end card -->
+
+          <div class="card">
+
+            <div class="card-header alert-success">
+              <h5>E / Activity / 4498</h6>
+            </div>
+
+            <div class="card-body">
+      
+              <div class="row">
+                <div class="col-md-2">
+                  <p class="card-title">Priority: <span>E</span></p>
+                  <p class="card-text">TAG: Activity</p>
+                  <p class="card-text">PID: 4498</p>
+                </div>
+
+                <div class="col-md-10">
+                  <p>com.google.android.apps.gsa.shared.util.concurrent.a.ag.run(Unknown Source:4)</p>
+                </div>
+
+              </div> <!-- end row -->
+
+
+            </div><!-- end card-body -->
+
+          </div> <!-- end card -->
+
+          <div class="card">
+
+            <div class="card-header alert-success">
+              <h5>E / Activity / 4498</h6>
+            </div>
+
+            <div class="card-body">
+      
+              <div class="row">
+                <div class="col-md-2">
+                  <p class="card-title">Priority: <span>E</span></p>
+                  <p class="card-text">TAG: Activity</p>
+                  <p class="card-text">PID: 4498</p>
+                </div>
+
+                <div class="col-md-10">
+                  <p>com.google.android.apps.gsa.shared.util.concurrent.a.ag.run(Unknown Source:4)</p>
+                </div>
+
+              </div> <!-- end row -->
+
+
+            </div><!-- end card-body -->
+
+          </div> <!-- end card -->
+
+          <div class="card">
+
+            <div class="card-header alert-success">
+              <h5>E / Activity / 4498</h6>
+            </div>
+
+            <div class="card-body">
+      
+              <div class="row">
+                <div class="col-md-2">
+                  <p class="card-title">Priority: <span>E</span></p>
+                  <p class="card-text">TAG: Activity</p>
+                  <p class="card-text">PID: 4498</p>
+                </div>
+
+                <div class="col-md-10">
+                  <p>com.google.android.apps.gsa.shared.util.concurrent.a.ag.run(Unknown Source:4)</p>
+                </div>
+
+              </div> <!-- end row -->
+
+
+            </div><!-- end card-body -->
+
+          </div> <!-- end card -->
+
+          <!--% include('reports.tpl', data=data)-->
+
         </main> <!-- end main -->
       </div>
+
+      
     </div>
 
     <!-- Bootstrap core JavaScript
