@@ -7,7 +7,6 @@ import datetime
 import hashlib
 import uuid
 
-# esti es una prueba
 
 instClient = FASClient()
 instClient.token = "None"
