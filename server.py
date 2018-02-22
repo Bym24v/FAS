@@ -1,6 +1,6 @@
 from bottle import route, run, template, redirect, request, post, response, error
 from modules.fstatic import staticFile
-from modules.fadb.adbBin import StartADB
+from modules.fadb.adbBin import FAStartADB, FASDevices
 from modules.fmongodb.fClient import FASClient
 from modules.fapi.api import *
 import datetime
@@ -87,8 +87,12 @@ def service_logout():
 @route('/adb')
 def service_adb():
     
-    StartADB();
+    FAStartADB()
     #return template('index')
+
+@route('/devices')
+def service_devices_adb():
+    FASDevices()
 
 
 @error(404)

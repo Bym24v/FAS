@@ -9,6 +9,7 @@ db = client.FAS
 
 class FASClient:
 
+    # Register
     def FasRegister(self, name, password):
 
         if name == "" and password == "":
@@ -35,6 +36,7 @@ class FASClient:
 
         return False
 
+    # Login
     def FasLogin(self, name, password):
 
         if name == "" and password == "":
@@ -62,6 +64,7 @@ class FASClient:
 
         return False
     
+    # Token
     def FasCheckToken(self, token):
 
         if token == "":

@@ -23,14 +23,49 @@ def runAdb():
         tag = line[2:line.find('(')]
         pid = line[line.find('(')+1:line.find(')')]
         msg = line[line.find(':')+2:: ]
+
         #print 'PRIORITY: ' + priority + '\t TAG: ' + tag +  '\t PID: ' + pid + '\t MESSAGE: ' + msg
         #instFas.FasSaveRawData(priority, tag, pid, msg)
 
     p.terminate()
+
+def FASGetDevices():
     
+    # Path
+    path =  os.getcwd() + "/tools/adb/./adb"
+    arg = "devices"
+    
+    # Open
+    p = Popen([path, arg], stdout=PIPE)
+
+    # Loop
+    for line in iter(p.stdout.readline, b''):
+        
+
+        print line
+
+
+        #line = " ".join(line.split())
+        #priority = line[0]
+        #tag = line[2:line.find('(')]
+        #pid = line[line.find('(')+1:line.find(')')]
+        #msg = line[line.find(':')+2:: ]
+
+        #print 'PRIORITY: ' + priority + '\t TAG: ' + tag +  '\t PID: ' + pid + '\t MESSAGE: ' + msg
+        #instFas.FasSaveRawData(priority, tag, pid, msg)
+
+    p.terminate()
+
+
+def FASDevices():
+    # New Thread
+    t = threading.Thread(target=FASGetDevices)
+    t.start()
+
+
 
 # Start adb
-def StartADB():
+def FAStartADB():
     
     # New Thread
     t = threading.Thread(target=runAdb)
